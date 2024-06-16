@@ -1,0 +1,16 @@
+<!-- shop/templates/shop/product_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Form</title>
+</head>
+<body>
+    <h1>Product Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'product-list' %}">Back to list</a>
+</body>
+</html>
